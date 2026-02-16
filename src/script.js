@@ -26,7 +26,6 @@ async function fetchData(keyword) {
 function renderMovie(movies) {
     const boxContent = document.getElementById('box-content');
 
-
     const html = movies.map(movie => 
         movieBox(
             movie.Title,
@@ -36,9 +35,8 @@ function renderMovie(movies) {
     boxContent.innerHTML = html;
 }
 
-// Serach action
-
-function serachMovie() {
+// Search action
+function searchMovie() {
     const form = document.querySelector('form');
     const input = document.getElementById('search');
 
@@ -68,8 +66,8 @@ function movieBox(title, type, poster) {
 }
 
 function initApp() {
-    fetchData('batman');
-    serachMovie();
+    fetchData('casper');
+    searchMovie();
 }
 
 initApp()
